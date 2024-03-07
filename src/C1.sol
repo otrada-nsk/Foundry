@@ -38,9 +38,9 @@ contract ShnorrVerifyer {
 
         c = uint256(keccak256(abi.encode(t))) % p;
         //b = false;
-        //uint256 k = modExp(X, c, p);
+        uint256 k = modExp(X, c, p);
 
-        //b = modExp(g, prove.z, p) == (prove.A * k) % p; 
+        b = modExp(g, prove.z, p) == (prove.A * k) % p; 
     }
 
 
